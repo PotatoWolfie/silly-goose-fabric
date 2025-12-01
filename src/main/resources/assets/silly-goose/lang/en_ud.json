@@ -1,0 +1,49 @@
+{
+  "item.silly-goose.goose_spawn_egg": "ƃƃƎ uɐdʍS ǝsooƃ",
+  "item.silly-goose.white_egg": "ƃƃƎ ǝʇᴉɥM",
+  "item.silly-goose.big_white_egg": "ƃƃƎ ǝʇᴉɥM ƃᴉᗺ",
+  "item.silly-goose.small_white_egg": "ƃƃƎ ǝʇᴉɥM llɐɯS",
+  "item.silly-goose.raw_goose": "ǝsooƃ ʍɐɹ",
+
+  "item.silly-goose.cooked_goose": "ǝsooƃ pǝʞooƆ",
+
+  "entity.silly-goose.goose": "ǝsooƃ",
+  "entity.silly-goose.white_egg": "ƃƃƎ ǝʇᴉɥM",
+  "entity.silly-goose.small_white_egg": "ƃƃƎ ǝʇᴉɥM llɐɯS",
+  "entity.silly-goose.big_white_egg": "ƃƃƎ ǝʇᴉɥM ƃᴉᗺ",
+
+  "death.attack.goose_bother": "%1$s pǝʇɐǝɹʇsᴉp ʇoƃ",
+  "death.attack.goose_bother.item": "%1$s %3$s ǝsn pǝsuᴉ uᴉpslǝᴉʍ %2$s ʎq pǝʇɐǝɹʇsᴉp",
+
+  "death.attack.goose_peck": "%1$s pǝʇɐǝɥ ʇoƃ ʞɔǝd",
+  "death.attack.goose_peck.item": "%1$s %3$s ʇsᴉuƃ %2$s ʎq ʞɔǝd",
+
+  "death.attack.goose_honk": "%1$s ǝsooƃ ǝɥʇ ʎq ʞuoɥ",
+  "death.attack.goose_honk.item": "%1$s %3$s ɥʇᴉʍ ǝsooƃ ǝɥʇ ʞuoɥ",
+
+  "sounds.silly-goose.goose_honk": "ʞuoH ǝsooƃ",
+  "sounds.silly-goose.goose_attack": "ʞɔɐʇʇ∀ ǝsooƃ",
+  "sounds.silly-goose.goose_death": "ɥʇɐǝᗡ ǝsooƃ",
+  "sounds.silly-goose.goose_hurt": "ʇɹnH ǝsooƃ",
+
+  "advancement.silly-goose.honk_and_run.title": "unR puɐ ʞuoH",
+  "advancement.silly-goose.honk_and_run.description": "ǝsooƃ ʎq pǝʞɔᴉlɟ ǝq",
+  "advancement.silly-goose.hit_and_run.title": "unR puɐ ʇᴉH",
+  "advancement.silly-goose.hit_and_run.description": "pɹoʍs ɐ ɥʇᴉʍ ǝsooƃ ʎq ʇɐɥ ǝq",
+  "advancement.silly-goose.unfair_trade.title": "ǝpɐɹ⊥ ɹᴉɐɟu∩",
+  "advancement.silly-goose.unfair_trade.description": "pɹoʍs ɐ ɹoɟ ǝsooƃ ɐ ǝʌᴉƃ",
+
+  "splash.silly-goose.honk": "ʞuoH ʞuoH",
+  "splash.silly-goose.silly_goose": "ǝsooƃ ʎllᴉs ɐ ǝɹ,no⅄",
+  "splash.silly-goose.define": "(21 op sᴉ ʇI) .ǝsooƃ ǝuᴉɟǝᗡ",
+  "splash.silly-goose.quack": ".ʞɔɐnb ʇou ,ʞuoH ʇ,sI",
+  "splash.silly-goose.duck": ".spǝppɐ ǝq llᴉʍ sʞɔnᗡ",
+  "splash.silly-goose.57": "!ǝsooƃ ǝɹoɯ %75 ɥʇᴉʍ ʍoN",
+  "splash.silly-goose.goose_overlords": ".ǝsooƃ ǝɥʇ oʇ pɐǝɹq pǝǝɟ ʇou oᗡ",
+  "splash.silly-goose.untitled_goose_game": ".ǝɯɐƃ ǝsooƃ ǝɥʇ ʎɹ⊥",
+  "splash.silly-goose.no_geese_allowed": "!pǝʍolloɐ ǝsǝoƃ oN",
+  "splash.silly-goose.honking": "!sǝʞɔᴉɟᴉʇuᴉ no ʞuouH",
+
+  "modmenu.descriptionTranslation.silly-goose": "pᴉlssᴉ ʎʇᴉlslᴉs ǝʇᴉnb ɐ ǝsooƃ sǝslᴉ sʇs∀",
+  "modmenu.nameTranslation.modmenu": "ǝsooƃ ʎllᴉS"
+}

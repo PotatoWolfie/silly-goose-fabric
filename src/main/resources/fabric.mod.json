@@ -1,0 +1,53 @@
+{
+	"schemaVersion": 1,
+	"id": "silly-goose",
+	"version": "1.0.0",
+	"name": "Silly Goose",
+	"description": "A silly mod that adds silly geese to Minecraft that are slightly annoying.",
+	"authors": [
+		"Demidiant",
+		"PotatoWolfie"
+	],
+	"contact": {
+		"homepage": "https://potatowolfie.github.io/silly-goose.html",
+		"sources": "https://github.com/PotatoWolfie/silly-goose"
+	},
+	"license": "Limited All Rights Reserved",
+	"icon": "assets/silly-goose/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"potatowolfie.silly_goose.SillyGoose"
+		],
+		"fabric-datagen": [
+			"potatowolfie.silly_goose.SillyGooseDataGenerator"
+		],
+		"client": [
+			"potatowolfie.silly_goose.SillyGooseClient"
+		]
+	},
+	"mixins": [
+		"silly-goose.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.9",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"badges": [
+				"client"
+			],
+			"links": {
+				"modmenu.modrinth": "https://modrinth.com/mod/silly-goose",
+				"modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/silly-goose",
+				"modmenu.wiki": "https://potatowolfie.github.io/silly_goose.html"
+			}
+		}
+	}
+}

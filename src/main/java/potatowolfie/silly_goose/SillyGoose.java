@@ -1,0 +1,79 @@
+package potatowolfie.silly_goose;
+
+import net.fabricmc.api.ModInitializer;
+
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.SpawnLocationTypes;
+import net.minecraft.entity.SpawnRestriction;
+import net.minecraft.world.Heightmap;
+import net.minecraft.world.biome.BiomeKeys;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import potatowolfie.silly_goose.entity.SillyGooseEntities;
+import potatowolfie.silly_goose.entity.goose.GooseEntity;
+import potatowolfie.silly_goose.item.SillyGooseItems;
+import potatowolfie.silly_goose.registry.SillyGooseDataComponentTypes;
+import potatowolfie.silly_goose.registry.SillyGooseRegistryKeys;
+import potatowolfie.silly_goose.registry.SillyGooseTrackedDataHandlerRegistry;
+import potatowolfie.silly_goose.sound.SillyGooseSounds;
+
+import java.util.Random;
+
+public class SillyGoose implements ModInitializer {
+	public static final String MOD_ID = "silly-goose";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	@Override
+	public void onInitialize() {
+		SillyGooseRegistryKeys.registerModRegistryKeys();
+		SillyGooseTrackedDataHandlerRegistry.register();
+		SillyGooseDataComponentTypes.register();
+		SillyGooseEntities.registerModEntities();
+		SillyGooseItems.registerModItems();
+		SillyGooseSounds.registerSounds();
+
+		FabricDefaultAttributeRegistry.register(SillyGooseEntities.GOOSE, GooseEntity.createGooseAttributes());
+		SpawnRestriction.register(
+				SillyGooseEntities.GOOSE,
+				SpawnLocationTypes.ON_GROUND,
+				Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+				GooseEntity::canSpawn
+		);
+		BiomeModifications.addSpawn(
+				BiomeSelectors.foundInOverworld()
+						.and(BiomeSelectors.excludeByKey(
+								BiomeKeys.OCEAN,
+								BiomeKeys.DEEP_OCEAN,
+								BiomeKeys.COLD_OCEAN,
+								BiomeKeys.DEEP_COLD_OCEAN,
+								BiomeKeys.FROZEN_OCEAN,
+								BiomeKeys.DEEP_FROZEN_OCEAN,
+								BiomeKeys.LUKEWARM_OCEAN,
+								BiomeKeys.DEEP_LUKEWARM_OCEAN,
+								BiomeKeys.WARM_OCEAN,
+								BiomeKeys.DESERT,
+								BiomeKeys.BADLANDS,
+								BiomeKeys.WOODED_BADLANDS,
+								BiomeKeys.ERODED_BADLANDS
+						)),
+				SpawnGroup.CREATURE,
+				SillyGooseEntities.GOOSE,
+				18,
+				1,
+				3
+		);
+
+		Random random = new Random();
+		int number = random.nextInt(3);
+		if (number == 0) {
+			LOGGER.info("HONK HONK");
+		} else if (number == 1) {
+			LOGGER.info("You're a silly goose!");
+		} else if (number == 2) {
+			LOGGER.info("Define Goose. (Hint: It isn't 12)");
+		}
+	}
+}

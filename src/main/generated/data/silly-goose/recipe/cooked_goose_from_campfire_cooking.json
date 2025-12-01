@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": "silly-goose:raw_goose",
+  "result": {
+    "id": "silly-goose:cooked_goose"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "item.silly-goose.goose_spawn_egg": "Goose Spawning Egg",
+  "item.silly-goose.white_egg": "White Egg",
+  "item.silly-goose.big_white_egg": "Great White Egg",
+  "item.silly-goose.small_white_egg": "Small White Egg",
+  "item.silly-goose.raw_goose": "Raw Gooseflesh",
+  "item.silly-goose.cooked_goose": "Baked Gooseflesh",
+
+  "entity.silly-goose.goose": "Goose",
+  "entity.silly-goose.white_egg": "White Egg",
+  "entity.silly-goose.small_white_egg": "Small White Egg",
+  "entity.silly-goose.big_white_egg": "Great White Egg",
+
+  "death.attack.goose_bother": "%1$s was nagged to death",
+  "death.attack.goose_bother.item": "%1$s was nagged to death by %2$s wielding %3$s",
+
+  "death.attack.goose_peck": "%1$s was pecked to death",
+  "death.attack.goose_peck.item": "%1$s was pecked to death by %2$s wielding %3$s",
+
+  "death.attack.goose_honk": "%1$s was horn-blasted by Goose",
+  "death.attack.goose_honk.item": "%1$s was horn-blasted by Goose wielding %3$s",
+
+  "sounds.silly-goose.goose_honk": "Goose Horn-blast",
+  "sounds.silly-goose.goose_attack": "Goose Onset",
+  "sounds.silly-goose.goose_death": "Goose Death-cry",
+  "sounds.silly-goose.goose_hurt": "Goose Hurt-cry",
+
+  "advancement.silly-goose.honk_and_run.title": "Horn-blast and Flee",
+  "advancement.silly-goose.honk_and_run.description": "Be hit by a Goose's horn-blast",
+  "advancement.silly-goose.hit_and_run.title": "Hit and Flee",
+  "advancement.silly-goose.hit_and_run.description": "Be hit by a blade-bearing Goose",
+  "advancement.silly-goose.unfair_trade.title": "Unfair Swap",
+  "advancement.silly-goose.unfair_trade.description": "Give food for a Goose's blade",
+
+  "splash.silly-goose.honk": "HORN-BLAST",
+  "splash.silly-goose.silly_goose": "Thou art a Silly Goose!",
+  "splash.silly-goose.define": "Say what Goose means. (Hint: Not twelve.)",
+  "splash.silly-goose.quack": "It is horn-blast, not quack.",
+  "splash.silly-goose.duck": "No ducks shall be added.",
+  "splash.silly-goose.57": "Now with seven and fifty hundredths more Geese!",
+  "splash.silly-goose.goose_overlords": "Feed no bread to Geese!",
+  "splash.silly-goose.untitled_goose_game": "Also try Untitled Goose Game!",
+  "splash.silly-goose.no_geese_allowed": "No Geese Allowed!",
+  "splash.silly-goose.honking": "*horn-blasting grows stronger*",
+
+  "modmenu.descriptionTranslation.silly-goose": "A silly mod that adds nagging, horn-blasting geese to Minecraft.",
+  "modmenu.nameTranslation.modmenu": "Silly Goose"
+}

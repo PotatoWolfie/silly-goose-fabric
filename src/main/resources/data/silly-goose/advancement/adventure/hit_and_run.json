@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:stone_sword"
+    },
+    "title": {
+      "translate": "advancement.silly-goose.hit_and_run.title"
+    },
+    "description": {
+      "translate": "advancement.silly-goose.hit_and_run.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "silly-goose:adventure/honk_and_run",
+  "criteria": {
+    "hit_and_ran": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "hit_and_ran"
+    ]
+  ]
+}

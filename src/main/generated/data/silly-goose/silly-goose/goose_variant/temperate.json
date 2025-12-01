@@ -1,0 +1,8 @@
+{
+  "asset_id": "silly-goose:entity/goose/temperate_goose",
+  "spawn_conditions": [
+    {
+      "priority": 0
+    }
+  ]
+}

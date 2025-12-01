@@ -1,0 +1,48 @@
+{
+  "item.silly-goose.goose_spawn_egg": "Goosie spon ec",
+  "item.silly-goose.white_egg": "Waite ec",
+  "item.silly-goose.big_white_egg": "Big Waite ec",
+  "item.silly-goose.small_white_egg": "Smol Waite ec",
+  "item.silly-goose.raw_goose": "RAWR GOOSIE",
+  "item.silly-goose.cooked_goose": "Cookied Goosie",
+
+  "entity.silly-goose.goose": "Goosie",
+  "entity.silly-goose.white_egg": "Waite ec",
+  "entity.silly-goose.small_white_egg": "Smol Waite ec",
+  "entity.silly-goose.big_white_egg": "Big Waite ec",
+
+  "death.attack.goose_bother": "%1$s wuz bothered 2 death by a goosie",
+  "death.attack.goose_bother.item": "%1$s got ultra-bothered by %2$s usin %3$s",
+
+  "death.attack.goose_peck": "%1$s wuz peckd 2 oblivyun",
+  "death.attack.goose_peck.item": "%1$s wuz peckd by %2$s usin %3$s",
+
+  "death.attack.goose_honk": "%1$s wuz HONKD at by Goosie",
+  "death.attack.goose_honk.item": "%1$s got honkd on by Goosie usin %3$s",
+
+  "sounds.silly-goose.goose_honk": "Goosie Honx",
+  "sounds.silly-goose.goose_attack": "Goosie Attak",
+  "sounds.silly-goose.goose_death": "Goosie RIP",
+  "sounds.silly-goose.goose_hurt": "Goosie Ouchie",
+
+  "advancement.silly-goose.honk_and_run.title": "HONK & RUN",
+  "advancement.silly-goose.honk_and_run.description": "Get honkd by a goosie",
+  "advancement.silly-goose.hit_and_run.title": "BONK & RUN",
+  "advancement.silly-goose.hit_and_run.description": "Get attak’d by a goosie with a shiny stick",
+  "advancement.silly-goose.unfair_trade.title": "Unfair Tradz",
+  "advancement.silly-goose.unfair_trade.description": "Gib goosie fud, get sword???",
+
+  "splash.silly-goose.honk": "HONK HONK :3",
+  "splash.silly-goose.silly_goose": "U a SILLY GOOSIE!!",
+  "splash.silly-goose.define": "Define Goos. (Hint: Not 12)",
+  "splash.silly-goose.quack": "No quak. Only honk.",
+  "splash.silly-goose.duck": "Stop askin abt ducks.",
+  "splash.silly-goose.57": "Now wif 57% moar goos!",
+  "splash.silly-goose.goose_overlords": "Don't giv bread 2 goosies!",
+  "splash.silly-goose.untitled_goose_game": "Play GOOSE GAME!!!",
+  "splash.silly-goose.no_geese_allowed": "No goosies alowd!",
+  "splash.silly-goose.honking": "*honk intensifyz*",
+
+  "modmenu.descriptionTranslation.silly-goose": "Silly mod wif silly goosies who r silly.",
+  "modmenu.nameTranslation.modmenu": "Silly Goosie"
+}

@@ -1,0 +1,48 @@
+{
+  "item.silly-goose.goose_spawn_egg": "Яйцо призыва гуся",
+  "item.silly-goose.white_egg": "Белое яйцо",
+  "item.silly-goose.big_white_egg": "Большое белое яйцо",
+  "item.silly-goose.small_white_egg": "Маленькое белое яйцо",
+  "item.silly-goose.raw_goose": "Сырая гусятина",
+  "item.silly-goose.cooked_goose": "Жареная гусятина",
+
+  "entity.silly-goose.goose": "Гусь",
+  "entity.silly-goose.white_egg": "Белое яйцо",
+  "entity.silly-goose.small_white_egg": "Маленькое белое яйцо",
+  "entity.silly-goose.big_white_egg": "Большое белое яйцо",
+
+  "death.attack.goose_bother": "%1$s был выбешен до смерти",
+  "death.attack.goose_bother.item": "%1$s был выбешен до смерти %2$s с помощью %3$s",
+
+  "death.attack.goose_peck": "%1$s был заклёван до смерти",
+  "death.attack.goose_peck.item": "%1$s был заклёван до смерти %2$s с помощью %3$s",
+
+  "death.attack.goose_honk": "%1$s был загогочен Гусём",
+  "death.attack.goose_honk.item": "%1$s был загогочен Гусём с помощью %3$s",
+
+  "sounds.silly-goose.goose_honk": "Гусь гогочет",
+  "sounds.silly-goose.goose_attack": "Гусь атакует",
+  "sounds.silly-goose.goose_death": "Гусь погибает",
+  "sounds.silly-goose.goose_hurt": "Гусь ранен",
+
+  "advancement.silly-goose.honk_and_run.title": "Я - гусь, я пожалуй...",
+  "advancement.silly-goose.honk_and_run.description": "Получите удар от гуся",
+  "advancement.silly-goose.hit_and_run.title": "Я - гусь, можно я до вас...?",
+  "advancement.silly-goose.hit_and_run.description": "Получите удар от гуся держащего меч",
+  "advancement.silly-goose.unfair_trade.title": "Невыгодная сделка",
+  "advancement.silly-goose.unfair_trade.description": "Дайте гусю еды чтобы обменять меч",
+
+  "splash.silly-goose.honk": "HONK HONK",
+  "splash.silly-goose.silly_goose": "You're a silly goose!",
+  "splash.silly-goose.define": "Define Goose. (Hint: It isn't 12)",
+  "splash.silly-goose.quack": "It's honk, not quack.",
+  "splash.silly-goose.duck": "We’re still not adding ducks.",
+  "splash.silly-goose.57": "Now with 57% more geese!",
+  "splash.silly-goose.goose_overlords": "Don't feed bread to geese!",
+  "splash.silly-goose.untitled_goose_game": "Also try Untitled Goose Game!",
+  "splash.silly-goose.no_geese_allowed": "No geese allowed!",
+  "splash.silly-goose.honking": "*honking intensifies*",
+
+  "modmenu.descriptionTranslation.silly-goose": "A silly mod that adds silly geese to Minecraft that are slightly annoying.",
+  "modmenu.nameTranslation.modmenu": "Silly Goose"
+}

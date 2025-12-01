@@ -1,0 +1,48 @@
+{
+  "item.silly-goose.goose_spawn_egg": "Goose Spawnin’ Egg",
+  "item.silly-goose.white_egg": "White Egg",
+  "item.silly-goose.big_white_egg": "Great White Egg",
+  "item.silly-goose.small_white_egg": "Tiny White Egg",
+  "item.silly-goose.raw_goose": "Uncooked Gooseflesh",
+  "item.silly-goose.cooked_goose": "Cooked Goose Meat",
+
+  "entity.silly-goose.goose": "Goose",
+  "entity.silly-goose.white_egg": "White Egg",
+  "entity.silly-goose.small_white_egg": "Tiny White Egg",
+  "entity.silly-goose.big_white_egg": "Great White Egg",
+
+  "death.attack.goose_bother": "%1$s was pestered t’ death by a goose",
+  "death.attack.goose_bother.item": "%1$s was pestered by %2$s wieldin’ %3$s",
+
+  "death.attack.goose_peck": "%1$s was peck’d t’ the briny deep",
+  "death.attack.goose_peck.item": "%1$s was peck’d apart by %2$s usin’ %3$s",
+
+  "death.attack.goose_honk": "%1$s got blasted by the goose’s mighty honk",
+  "death.attack.goose_honk.item": "%1$s was felled by a goose’s honk, with %3$s in tow",
+
+  "sounds.silly-goose.goose_honk": "Goose Honkin’",
+  "sounds.silly-goose.goose_attack": "Goose Strikin’",
+  "sounds.silly-goose.goose_death": "Goose’s Last Squawk",
+  "sounds.silly-goose.goose_hurt": "Goose in Pain",
+
+  "advancement.silly-goose.honk_and_run.title": "Honk ’n Run",
+  "advancement.silly-goose.honk_and_run.description": "Take a mighty honk t’ the face",
+  "advancement.silly-goose.hit_and_run.title": "Cut ’n Run",
+  "advancement.silly-goose.hit_and_run.description": "Be struck down by a cutlass-wieldin’ goose",
+  "advancement.silly-goose.unfair_trade.title": "Crooked Bargain",
+  "advancement.silly-goose.unfair_trade.description": "Trade grub fer a goose’s blade",
+
+  "splash.silly-goose.honk": "HONK YE HONK",
+  "splash.silly-goose.silly_goose": "Ye be a Silly Goose!",
+  "splash.silly-goose.define": "Define ‘Goose’. (Hint: Not 12.)",
+  "splash.silly-goose.quack": "’Tis HONK, not quack.",
+  "splash.silly-goose.duck": "We ain’t addin’ ducks.",
+  "splash.silly-goose.57": "Now w’ 57% more goose!",
+  "splash.silly-goose.goose_overlords": "Do NOT feed bread t’ the geese.",
+  "splash.silly-goose.untitled_goose_game": "Try that Goose Game ye lubber!",
+  "splash.silly-goose.no_geese_allowed": "No Geese Permitted!",
+  "splash.silly-goose.honking": "Honk be thunderin’!",
+
+  "modmenu.descriptionTranslation.silly-goose": "A silly mod addin’ silly geese fer silly sailors.",
+  "modmenu.nameTranslation.modmenu": "Silly Goose"
+}

@@ -1,0 +1,48 @@
+{
+  "item.silly-goose.goose_spawn_egg": "Adder Stone o' Goose",
+  "item.silly-goose.white_egg": "Egg Most White",
+  "item.silly-goose.big_white_egg": "Great Egg Most White",
+  "item.silly-goose.small_white_egg": "Small Egg Most White",
+  "item.silly-goose.raw_goose": "Raw Goose",
+  "item.silly-goose.cooked_goose": "Roasted Goose",
+
+  "entity.silly-goose.goose": "Goose",
+  "entity.silly-goose.white_egg": "Egg Most White",
+  "entity.silly-goose.small_white_egg": "Small Egg Most White",
+  "entity.silly-goose.big_white_egg": "Great Egg Most White",
+
+  "death.attack.goose_bother": "%1$s was vex'd unto death",
+  "death.attack.goose_bother.item": "%1$s was vex'd unto death by %2$s using %3$s",
+
+  "death.attack.goose_peck": "%1$s was peck'd most grievously unto death",
+  "death.attack.goose_peck.item": "%1$s was peck'd most grievously unto death by %2$s using %3$s",
+
+  "death.attack.goose_honk": "%1$s was honk'd at by Goose",
+  "death.attack.goose_honk.item": "%1$s was honk'd at by Goose using %3$s",
+
+  "sounds.silly-goose.goose_honk": "Goose doth honk",
+  "sounds.silly-goose.goose_attack": "Goose doth attack",
+  "sounds.silly-goose.goose_death": "Goose doth perish",
+  "sounds.silly-goose.goose_hurt": "Goose doth suffer",
+
+  "advancement.silly-goose.honk_and_run.title": "Honk and Make Haste",
+  "advancement.silly-goose.honk_and_run.description": "Be struck by a goose",
+  "advancement.silly-goose.hit_and_run.title": "Strike and Make Haste",
+  "advancement.silly-goose.hit_and_run.description": "Be struck by a goose bearing a sword",
+  "advancement.silly-goose.unfair_trade.title": "Most Unfair Exchange",
+  "advancement.silly-goose.unfair_trade.description": "Bestow sustenance upon a goose in exchange for a blade",
+
+  "splash.silly-goose.honk": "HONK HONK",
+  "splash.silly-goose.silly_goose": "Thou art a silly goose!",
+  "splash.silly-goose.define": "Define Goose. (Hint: 'Tis not 12)",
+  "splash.silly-goose.quack": "'Tis honk, not quack.",
+  "splash.silly-goose.duck": "We art still not adding ducks.",
+  "splash.silly-goose.57": "Now with seven and fifty percent more geese!",
+  "splash.silly-goose.goose_overlords": "Feed not bread to geese!",
+  "splash.silly-goose.untitled_goose_game": "Also try Untitled Goose Game!",
+  "splash.silly-goose.no_geese_allowed": "No geese allow'd!",
+  "splash.silly-goose.honking": "*honking doth intensify*",
+
+  "modmenu.descriptionTranslation.silly-goose": "A silly mod that doth add silly geese to Minecraft that art slightly vexing.",
+  "modmenu.nameTranslation.modmenu": "Silly Goose"
+}

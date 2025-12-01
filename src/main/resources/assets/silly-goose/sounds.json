@@ -1,0 +1,30 @@
+{
+  "goose_honk": {
+    "subtitle": "sounds.silly-goose.goose_honk",
+    "sounds": [
+      "silly-goose:goose_honk_1",
+      "silly-goose:goose_honk_2",
+      "silly-goose:goose_honk_3"
+    ]
+  },
+  "goose_attack": {
+    "subtitle": "sounds.silly-goose.goose_attack",
+    "sounds": [
+      "silly-goose:goose_attack"
+    ]
+  },
+  "goose_death": {
+    "subtitle": "sounds.silly-goose.goose_death",
+    "sounds": [
+      "silly-goose:goose_death_1",
+      "silly-goose:goose_death_2"
+    ]
+  },
+  "goose_hurt": {
+    "subtitle": "sounds.silly-goose.goose_hurt",
+    "sounds": [
+      "silly-goose:goose_hurt_1",
+      "silly-goose:goose_hurt_2"
+    ]
+  }
+}
