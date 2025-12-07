@@ -43,8 +43,8 @@ public class GooseHitAndRunGoal extends Goal {
     private static final int WATER_EXIT_BOOST_INTERVAL = 10;
     private static final double WATER_EXIT_BOOST_STRENGTH = 0.3;
 
-    private static final int MIN_COOLDOWN = 20;
-    private static final int MAX_COOLDOWN = 21;
+    private static final int MIN_COOLDOWN = 6000;
+    private static final int MAX_COOLDOWN = 8400;
     private static final double DETECTION_RADIUS = 32.0;
     private static final double ATTACK_RANGE = 12.0;
     private static final double MIN_RUN_DISTANCE = 8.0;
