@@ -1,0 +1,48 @@
+{
+  "item.silly-goose.goose_spawn_egg": "ガチョウの産卵卵",
+  "item.silly-goose.white_egg": "白い卵",
+  "item.silly-goose.big_white_egg": "大きな白い卵",
+  "item.silly-goose.small_white_egg": "小さな白い卵",
+  "item.silly-goose.raw_goose": "生ガチョウ",
+  "item.silly-goose.cooked_goose": "調理済みのガチョウ",
+
+  "entity.silly-goose.goose": "ガチョウ",
+  "entity.silly-goose.white_egg": "白い卵",
+  "entity.silly-goose.small_white_egg": "小さな白い卵",
+  "entity.silly-goose.big_white_egg": "大きな白い卵",
+
+  "death.attack.goose_bother": "%1$s ひどく悩まされた",
+  "death.attack.goose_bother.item": "%1$s ひどく悩まされていた %2$s 使用 %3$s",
+
+  "death.attack.goose_peck": "%1$s つつかれて死んだ",
+  "death.attack.goose_peck.item": "%1$s つつかれて死んだ %2$s 使用 %3$s",
+
+  "death.attack.goose_honk": "%1$s グースにクラクションを鳴らされた",
+  "death.attack.goose_honk.item": "%1$s グースにクラクションを鳴らされた 使用 %3$s",
+
+  "sounds.silly-goose.goose_honk": "ガチョウの鳴き声",
+  "sounds.silly-goose.goose_attack": "ガチョウの攻撃",
+  "sounds.silly-goose.goose_death": "ガチョウが死ぬ",
+  "sounds.silly-goose.goose_hurt": "ガチョウが痛がっている",
+
+  "advancement.silly-goose.honk_and_run.title": "クラクションを鳴らして逃げる",
+  "advancement.silly-goose.honk_and_run.description": "ガチョウにぶつかる",
+  "advancement.silly-goose.hit_and_run.title": "ひき逃げ",
+  "advancement.silly-goose.hit_and_run.description": "剣を持ったガチョウに襲われる",
+  "advancement.silly-goose.unfair_trade.title": "不公正貿易",
+  "advancement.silly-goose.unfair_trade.description": "ガチョウに食べ物を与えれば、代わりに剣をくれるだろう。",
+
+  "splash.silly-goose.honk": "ベース ベース",
+  "splash.silly-goose.silly_goose": "あなたはなんておばかなの！",
+  "splash.silly-goose.define": "ガチョウを定義してください。（ヒント：12ではありません）",
+  "splash.silly-goose.quack": "それは「ガーガー」ではなく「グワッグワッ」だ。",
+  "splash.silly-goose.duck": "私たちはまだアヒルを追加していません。",
+  "splash.silly-goose.57": "今ならガチョウが57％増量！",
+  "splash.silly-goose.goose_overlords": "ガチョウにパンを与えないでください！",
+  "splash.silly-goose.untitled_goose_game": "「Untitled Goose Game」もぜひプレイしてみてください！",
+  "splash.silly-goose.no_geese_allowed": "ガチョウの立ち入り禁止！",
+  "splash.silly-goose.honking": "*クラクションの音が激しくなる*",
+
+  "modmenu.descriptionTranslation.silly-goose": "ちょっとうっとうしいバカなガチョウを Minecraft に追加するバカな MOD。",
+  "modmenu.nameTranslation.modmenu": "愚かなガチョウ"
+}
