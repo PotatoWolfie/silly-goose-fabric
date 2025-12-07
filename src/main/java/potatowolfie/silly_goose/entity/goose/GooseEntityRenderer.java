@@ -59,7 +59,7 @@ public class GooseEntityRenderer extends MobEntityRenderer<GooseEntity, GooseEnt
 
     public void updateRenderState(GooseEntity gooseEntity, GooseEntityRenderState gooseEntityRenderState, float f) {
         super.updateRenderState(gooseEntity, gooseEntityRenderState, f);
-        ArmedEntityRenderState.updateRenderState(gooseEntity, gooseEntityRenderState, this.itemModelManager);
+        ArmedEntityRenderState.updateRenderState(gooseEntity, gooseEntityRenderState, this.itemModelManager, f);
         gooseEntityRenderState.variant = (GooseVariant)gooseEntity.getVariant().value();
 
         gooseEntityRenderState.idleAnimationState.copyFrom(gooseEntity.idleAnimationState);

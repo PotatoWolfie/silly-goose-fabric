@@ -8,6 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Mixin(SplashTextResourceSupplier.class)
@@ -19,6 +20,8 @@ public class SplashTextMixin {
     @Inject(method = "apply*",
             at = @At("TAIL"))
     private void addGooseSplashes(CallbackInfo ci) {
+        splashTexts = new ArrayList<>(splashTexts);
+
         splashTexts.add(Text.translatable("splash.silly-goose.honk").getString());
         splashTexts.add(Text.translatable("splash.silly-goose.silly_goose").getString());
         splashTexts.add(Text.translatable("splash.silly-goose.define").getString());

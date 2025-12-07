@@ -450,7 +450,7 @@ public class GooseEntity extends AnimalEntity {
             Vec3d velocity = this.getVelocity();
             double surfaceBoost = this.isBaby() ? 0.12 : 0.10;
             this.setVelocity(velocity.x, surfaceBoost, velocity.z);
-            this.velocityModified = true;
+            this.velocityDirty = true;
             return;
         }
 
@@ -477,13 +477,13 @@ public class GooseEntity extends AnimalEntity {
 
             for (BlockPos landCheck : checkPositions) {
                 if (!this.getEntityWorld().getFluidState(landCheck).isIn(FluidTags.WATER) &&
-                        this.getEntityWorld().getBlockState(landCheck).isSolid()) {
+                        this.getEntityWorld().getBlockState(landCheck).isSolidBlock(this.getEntityWorld(), landCheck)) {
                     nearLand = true;
                     break;
                 }
                 BlockPos upOne = landCheck.up();
                 if (!this.getEntityWorld().getFluidState(upOne).isIn(FluidTags.WATER) &&
-                        this.getEntityWorld().getBlockState(upOne).isSolid()) {
+                        this.getEntityWorld().getBlockState(upOne).isSolidBlock(this.getEntityWorld(), upOne)) {
                     nearLand = true;
                     break;
                 }
@@ -492,7 +492,7 @@ public class GooseEntity extends AnimalEntity {
             if (nearLand) {
                 double boostStrength = this.isBaby() ? 0.15 : 0.14;
                 this.setVelocity(velocity.x, Math.max(velocity.y, boostStrength), velocity.z);
-                this.velocityModified = true;
+                this.velocityDirty = true;
                 return;
             }
         }
@@ -513,7 +513,7 @@ public class GooseEntity extends AnimalEntity {
             }
 
             this.setVelocity(velocity.x, newYVelocity, velocity.z);
-            this.velocityModified = true;
+            this.velocityDirty = true;
         }
     }
 

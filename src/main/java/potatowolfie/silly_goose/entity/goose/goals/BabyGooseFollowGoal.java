@@ -150,7 +150,7 @@ public class BabyGooseFollowGoal extends Goal {
                     velocity.y,
                     direction.z * swimSpeed
             );
-            this.animal.velocityModified = true;
+            this.animal.velocityDirty = true;
         } else {
             Vec3d velocity = this.animal.getVelocity();
             this.animal.setVelocity(
@@ -158,7 +158,7 @@ public class BabyGooseFollowGoal extends Goal {
                     velocity.y,
                     velocity.z * 0.7
             );
-            this.animal.velocityModified = true;
+            this.animal.velocityDirty = true;
         }
 
         this.animal.getNavigation().stop();
@@ -229,7 +229,7 @@ public class BabyGooseFollowGoal extends Goal {
                     if (hasNearbyLand) {
                         Vec3d velocity = animal.getVelocity();
                         animal.setVelocity(velocity.x, WATER_EXIT_BOOST_STRENGTH, velocity.z);
-                        animal.velocityModified = true;
+                        animal.velocityDirty = true;
                     }
                 }
             }

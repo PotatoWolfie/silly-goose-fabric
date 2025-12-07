@@ -303,7 +303,7 @@ public class GooseHitAndRunGoal extends Goal {
                     if (hasNearbyLand) {
                         Vec3d velocity = goose.getVelocity();
                         goose.setVelocity(velocity.x, WATER_EXIT_BOOST_STRENGTH, velocity.z);
-                        goose.velocityModified = true;
+                        goose.velocityDirty = true;
                     }
                 }
             }
@@ -345,7 +345,7 @@ public class GooseHitAndRunGoal extends Goal {
                     velocity.y,
                     direction.z * swimSpeed
             );
-            goose.velocityModified = true;
+            goose.velocityDirty = true;
         } else {
             Vec3d velocity = goose.getVelocity();
             goose.setVelocity(
@@ -353,7 +353,7 @@ public class GooseHitAndRunGoal extends Goal {
                     velocity.y,
                     velocity.z * 0.5
             );
-            goose.velocityModified = true;
+            goose.velocityDirty = true;
         }
     }
 
@@ -390,7 +390,7 @@ public class GooseHitAndRunGoal extends Goal {
                     velocity.y,
                     direction.z * swimSpeed
             );
-            goose.velocityModified = true;
+            goose.velocityDirty = true;
         } else {
             Vec3d velocity = goose.getVelocity();
             goose.setVelocity(
@@ -398,7 +398,7 @@ public class GooseHitAndRunGoal extends Goal {
                     velocity.y,
                     velocity.z * 0.5
             );
-            goose.velocityModified = true;
+            goose.velocityDirty = true;
         }
     }
 
