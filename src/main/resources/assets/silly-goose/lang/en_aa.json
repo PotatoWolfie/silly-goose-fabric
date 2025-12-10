@@ -43,6 +43,8 @@
   "splash.silly-goose.no_geese_allowed": "No Geese Allowed!",
   "splash.silly-goose.honking": "*horn-blasting grows stronger*",
 
+  "tag.item.silly-goose.goose_eggs": "Goose Egg",
+
   "modmenu.descriptionTranslation.silly-goose": "A silly mod that adds nagging, horn-blasting geese to Minecraft.",
   "modmenu.nameTranslation.modmenu": "Silly Goose"
 }

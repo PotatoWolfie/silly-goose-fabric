@@ -43,6 +43,8 @@
   "splash.silly-goose.no_geese_allowed": "ガチョウの立ち入り禁止！",
   "splash.silly-goose.honking": "*クラクションの音が激しくなる*",
 
+  "tag.item.silly-goose.goose_eggs": "ガチョウの卵",
+
   "modmenu.descriptionTranslation.silly-goose": "ちょっとうっとうしいバカなガチョウを Minecraft に追加するバカな MOD。",
   "modmenu.nameTranslation.modmenu": "愚かなガチョウ"
 }
