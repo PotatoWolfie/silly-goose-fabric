@@ -1,0 +1,50 @@
+{
+  "item.silly-goose.goose_spawn_egg": "거위 산란 계란",
+  "item.silly-goose.white_egg": "흰 계란",
+  "item.silly-goose.big_white_egg": "큰 흰 계란",
+  "item.silly-goose.small_white_egg": "작은 흰 계란",
+  "item.silly-goose.raw_goose": "생 거위",
+  "item.silly-goose.cooked_goose": "요리된 거위",
+
+  "entity.silly-goose.goose": "거위",
+  "entity.silly-goose.white_egg": "흰 계란",
+  "entity.silly-goose.small_white_egg": "작은 흰 계란",
+  "entity.silly-goose.big_white_egg": "큰 흰 계란",
+
+  "death.attack.goose_bother": "%1$s 심하게 괴롭혔다.",
+  "death.attack.goose_bother.item": "%1$s 심하게 괴롭혀진 %2$s 사용 %3$s",
+
+  "death.attack.goose_peck": "%1$s 붙어 죽었다",
+  "death.attack.goose_peck.item": "%1$s 붙어 죽은 %2$s 사용 %3$s",
+
+  "death.attack.goose_honk": "%1$s 구스에 크랙션이 울렸다",
+  "death.attack.goose_honk.item": "%1$s 구스에 균열이 울렸다 사용 %3$s",
+
+  "sounds.silly-goose.goose_honk": "거위의 울음소리",
+  "sounds.silly-goose.goose_attack": "거위 공격",
+  "sounds.silly-goose.goose_death": "거위가 죽는다",
+  "sounds.silly-goose.goose_hurt": "거위가 아프다",
+
+  "advancement.silly-goose.honk_and_run.title": "균열을 울리고 도망",
+  "advancement.silly-goose.honk_and_run.description": "거위에 부딪히다",
+  "advancement.silly-goose.hit_and_run.title": "탈출",
+  "advancement.silly-goose.hit_and_run.description": "검을 가진 거위에 습격당함",
+  "advancement.silly-goose.unfair_trade.title": "불공정 무역",
+  "advancement.silly-goose.unfair_trade.description": "거위에게 음식을 주면 대신 검을 줄 것이다",
+
+  "splash.silly-goose.honk": "베이스 베이스",
+  "splash.silly-goose.silly_goose": "당신은 얼마나 어리 석다!",
+  "splash.silly-goose.define": "거위를 정의하십시오. (힌트: 12가 아님)",
+  "splash.silly-goose.quack": "그것은 '가거'가 아니라 '구와그왓'이다.",
+  "splash.silly-goose.duck": "우리는 아직 오리를 추가하지 않았습니다.",
+  "splash.silly-goose.57": "지금이라면 거위가 57% 증량!",
+  "splash.silly-goose.goose_overlords": "거위에 빵을 주지 마십시오!",
+  "splash.silly-goose.untitled_goose_game": "「Untitled Goose Game」도 꼭 플레이해 보세요!",
+  "splash.silly-goose.no_geese_allowed": "거위의 출입 금지!",
+  "splash.silly-goose.honking": "*크랙션 소리가 심해진다*",
+
+  "tag.item.silly-goose.goose_eggs": "거위 계란",
+
+  "modmenu.descriptionTranslation.silly-goose": "조금 부끄러운 바보 같은 거위를 Minecraft에 추가하는 바보 같은 MOD.",
+  "modmenu.nameTranslation.modmenu": "어리석은 거위"
+}
