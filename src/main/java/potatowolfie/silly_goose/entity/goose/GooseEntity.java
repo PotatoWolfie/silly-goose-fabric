@@ -220,16 +220,50 @@ public class GooseEntity extends AnimalEntity {
         }
     }
 
-    @Override
-    public boolean damage(ServerWorld world, DamageSource source, float amount) {
-        boolean damaged = super.damage(world, source, amount);
+@Override
+public boolean damage(ServerWorld world, DamageSource source, float amount) {
+    boolean damaged = super.damage(world, source, amount);
 
-        if (damaged && this.isDead() && source.getAttacker() instanceof PlayerEntity player) {
-            notifyNearbyGeese(player);
-        }
-
-        return damaged;
+    if (!damaged) {
+        return false;
     }
+
+    Entity attacker = source.getAttacker();
+    if (this.isBaby() && attacker instanceof PlayerEntity player) {
+
+        // Baby runs away
+        this.getNavigation().stop();
+        this.getJumpControl().setActive();
+        this.getLookControl().lookAt(player, 180.0F, 180.0F);
+        this.getMoveControl().moveTo(
+                this.getX() + (this.random.nextDouble() - 0.5) * 4.0,
+                this.getY(),
+                this.getZ() + (this.random.nextDouble() - 0.5) * 4.0,
+                1.6
+        );
+        
+        alertAdultsOfBabyAttack(player);
+    }
+    if (damaged && this.isDead() && attacker instanceof PlayerEntity player) {
+        notifyNearbyGeese(player);
+    }
+
+    return damaged;
+}
+    
+private void alertAdultsOfBabyAttack(PlayerEntity attacker) {
+    Box box = this.getBoundingBox().expand(REVENGE_NOTIFICATION_RADIUS);
+
+    List<GooseEntity> adults = this.getEntityWorld().getEntitiesByClass(
+            GooseEntity.class,
+            box,
+            goose -> goose != this && goose.isAlive() && !goose.isBaby()
+    );
+
+    for (GooseEntity adult : adults) {
+        adult.setRevengeTarget(attacker);
+    }
+}
 
     private void notifyNearbyGeese(PlayerEntity killer) {
         Box searchBox = this.getBoundingBox().expand(REVENGE_NOTIFICATION_RADIUS);
@@ -798,4 +832,6 @@ public class GooseEntity extends AnimalEntity {
         CAN_PICKUP_LOOT = DataTracker.registerData(GooseEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
         IS_IN_HIT_AND_RUN_MODE = DataTracker.registerData(GooseEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     }
+
+    
 }
