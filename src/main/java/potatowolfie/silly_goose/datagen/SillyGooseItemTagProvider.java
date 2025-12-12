@@ -21,6 +21,10 @@ public class SillyGooseItemTagProvider extends FabricTagProvider.ItemTagProvider
                 .add(SillyGooseItems.RAW_GOOSE)
                 .add(SillyGooseItems.COOKED_GOOSE);
 
+        valueLookupBuilder(ItemTags.MEAT)
+                .add(SillyGooseItems.RAW_GOOSE)
+                .add(SillyGooseItems.COOKED_GOOSE);
+
         valueLookupBuilder(SillyGooseItemTags.Item.GOOSE_EGGS)
                 .add(SillyGooseItems.WHITE_EGG)
                 .add(SillyGooseItems.BIG_WHITE_EGG)

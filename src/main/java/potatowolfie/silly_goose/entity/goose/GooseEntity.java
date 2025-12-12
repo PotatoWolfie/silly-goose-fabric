@@ -89,6 +89,11 @@ public class GooseEntity extends AnimalEntity {
     private static final int MIN_EGG_LAY_TIME = 6000;
     private static final int MAX_EGG_LAY_TIME = 12000;
 
+    private int babyPanicTimer = 0;
+    private static final int BABY_PANIC_DURATION = 100;
+    private static final int BABY_PANIC_DURATION_VARIANCE = 40;
+    private static final double BABY_PANIC_SPEED_MULTIPLIER = 1.5;
+
     @Nullable
     private UUID revengeTargetUUID = null;
     private int revengeTimer = 0;
@@ -145,6 +150,7 @@ public class GooseEntity extends AnimalEntity {
         view.putBoolean("IsInOffPreferenceMode", this.isInOffPreferenceMode);
         view.putInt("EggLayTimer", this.eggLayTimer);
         view.putInt("SwordPickupCooldownTimer", this.swordPickupCooldownTimer);
+        view.putInt("BabyPanicTimer", this.babyPanicTimer);
 
         if (this.revengeTargetUUID != null) {
             view.put("RevengeTargetUUID", Uuids.CODEC, this.revengeTargetUUID);
@@ -169,6 +175,7 @@ public class GooseEntity extends AnimalEntity {
         this.isInOffPreferenceMode = view.getBoolean("IsInOffPreferenceMode", false);
         this.eggLayTimer = view.getInt("EggLayTimer", 0);
         this.swordPickupCooldownTimer = view.getInt("SwordPickupCooldownTimer", 0);
+        this.babyPanicTimer = view.getInt("BabyPanicTimer", 0);
 
         view.read("RevengeTargetUUID", Uuids.CODEC).ifPresent(uuid -> this.revengeTargetUUID = uuid);
         this.revengeTimer = view.getInt("RevengeTimer", 0);
@@ -192,6 +199,7 @@ public class GooseEntity extends AnimalEntity {
             handleEggLaying();
             handleRevengeTimer();
             handleSwordPickupCooldown();
+            handleBabyPanic();
         }
     }
 
@@ -220,50 +228,70 @@ public class GooseEntity extends AnimalEntity {
         }
     }
 
-@Override
-public boolean damage(ServerWorld world, DamageSource source, float amount) {
-    boolean damaged = super.damage(world, source, amount);
-
-    if (!damaged) {
-        return false;
+    private void handleBabyPanic() {
+        if (this.babyPanicTimer > 0) {
+            this.babyPanicTimer--;
+        }
     }
 
-    Entity attacker = source.getAttacker();
-    if (this.isBaby() && attacker instanceof PlayerEntity player) {
-
-        // Baby runs away
-        this.getNavigation().stop();
-        this.getJumpControl().setActive();
-        this.getLookControl().lookAt(player, 180.0F, 180.0F);
-        this.getMoveControl().moveTo(
-                this.getX() + (this.random.nextDouble() - 0.5) * 4.0,
-                this.getY(),
-                this.getZ() + (this.random.nextDouble() - 0.5) * 4.0,
-                1.6
-        );
-        
-        alertAdultsOfBabyAttack(player);
-    }
-    if (damaged && this.isDead() && attacker instanceof PlayerEntity player) {
-        notifyNearbyGeese(player);
+    public boolean isInPanicMode() {
+        return this.isBaby() && this.babyPanicTimer > 0;
     }
 
-    return damaged;
-}
+    @Override
+    public float getMovementSpeed() {
+        float baseSpeed = super.getMovementSpeed();
+        if (isInPanicMode()) {
+            return (float)(baseSpeed * BABY_PANIC_SPEED_MULTIPLIER);
+        }
+        return baseSpeed;
+    }
+
+    @Override
+    public boolean damage(ServerWorld world, DamageSource source, float amount) {
+        boolean damaged = super.damage(world, source, amount);
+
+        if (!damaged) {
+            return false;
+        }
+
+        Entity attacker = source.getAttacker();
+        if (this.isBaby() && attacker instanceof PlayerEntity player) {
+            this.getNavigation().stop();
+            this.getJumpControl().setActive();
+            this.getLookControl().lookAt(player, 180.0F, 180.0F);
+            this.getMoveControl().moveTo(
+                    this.getX() + (this.random.nextDouble() - 0.5) * 4.0,
+                    this.getY(),
+                    this.getZ() + (this.random.nextDouble() - 0.5) * 4.0,
+                    1.6
+            );
+
+            this.babyPanicTimer = BABY_PANIC_DURATION +
+                    this.random.nextInt(BABY_PANIC_DURATION_VARIANCE);
+
+            alertAdultsOfBabyAttack(player);
+        }
+        if (damaged && this.isDead() && attacker instanceof PlayerEntity player) {
+            notifyNearbyGeese(player);
+        }
+
+        return damaged;
+    }
     
-private void alertAdultsOfBabyAttack(PlayerEntity attacker) {
-    Box box = this.getBoundingBox().expand(REVENGE_NOTIFICATION_RADIUS);
+    private void alertAdultsOfBabyAttack(PlayerEntity attacker) {
+        Box box = this.getBoundingBox().expand(REVENGE_NOTIFICATION_RADIUS);
 
-    List<GooseEntity> adults = this.getEntityWorld().getEntitiesByClass(
-            GooseEntity.class,
-            box,
-            goose -> goose != this && goose.isAlive() && !goose.isBaby()
-    );
+        List<GooseEntity> adults = this.getEntityWorld().getEntitiesByClass(
+             GooseEntity.class,
+                box,
+                goose -> goose != this && goose.isAlive() && !goose.isBaby()
+        );
 
-    for (GooseEntity adult : adults) {
-        adult.setRevengeTarget(attacker);
+        for (GooseEntity adult : adults) {
+            adult.setRevengeTarget(attacker);
+        }
     }
-}
 
     private void notifyNearbyGeese(PlayerEntity killer) {
         Box searchBox = this.getBoundingBox().expand(REVENGE_NOTIFICATION_RADIUS);
