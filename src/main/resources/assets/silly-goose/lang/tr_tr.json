@@ -1,0 +1,50 @@
+{
+  "item.silly-goose.goose_spawn_egg": "Kaz Yumurtası",
+  "item.silly-goose.white_egg": "Beyaz Yumurta",
+  "item.silly-goose.big_white_egg": "Büyük Beyaz Yumurta",
+  "item.silly-goose.small_white_egg": "Küçük Beyaz Yumurta",
+  "item.silly-goose.raw_goose": "Çiğ Kaz",
+  "item.silly-goose.cooked_goose": "Pişmiş Kaz",
+
+  "entity.silly-goose.goose": "Kaz",
+  "entity.silly-goose.white_egg": "Beyaz Yumurta",
+  "entity.silly-goose.small_white_egg": "Küçük Beyaz Yumurta",
+  "entity.silly-goose.big_white_egg": "Büyük Beyaz Yumurta",
+
+  "death.attack.goose_bother": "%1$s aşırı derecede rahatsız oldu.",
+  "death.attack.goose_bother.item": "%1$s kılıç kullanan bir %2$s kullanarak %3$s",
+
+  "death.attack.goose_peck": "%1$s gagalanarak öldürüldü",
+  "death.attack.goose_peck.item": "%1$s gagalanarak öldürüldü bir %2$s kullanarak %3$s",
+
+  "death.attack.goose_honk": "%1$s bir kaz tarafından korna çalındı.",
+  "death.attack.goose_honk.item": "%1$s bir kaz tarafından ses çıkarılarak uyarıldı %3$s",
+
+  "sounds.silly-goose.goose_honk": "Kaz sesleri",
+  "sounds.silly-goose.goose_attack": "Kaz saldırıları",
+  "sounds.silly-goose.goose_death": "Kaz öldü",
+  "sounds.silly-goose.goose_hurt": "Kaz acıtıyor",
+
+  "advancement.silly-goose.honk_and_run.title": "Korna çal ve kaç",
+  "advancement.silly-goose.honk_and_run.description": "Bir kazın saldırısına uğramak",
+  "advancement.silly-goose.hit_and_run.title": "Çarp ve kaç",
+  "advancement.silly-goose.hit_and_run.description": "Elinde kılıç tutan bir kaz tarafından saldırıya uğramak",
+  "advancement.silly-goose.unfair_trade.title": "Adil olmayan ticaret",
+  "advancement.silly-goose.unfair_trade.description": "Bir kaza karşılığında bir kılıç verin.",
+
+  "splash.silly-goose.honk": "KORNA ÇAL ÇAL",
+  "splash.silly-goose.silly_goose": "Sen çok aptal birisin!",
+  "splash.silly-goose.define": "Kaz kelimesini tanımlayın. (İpucu: Cevap 12 değil)",
+  "splash.silly-goose.quack": "Bu "vak vak" değil, "gaga".",
+  "splash.silly-goose.duck": "Hala ördek eklemiyoruz.",
+  "splash.silly-goose.57": "Artık %57 daha fazla kaz var!",
+  "splash.silly-goose.goose_overlords": "Kazlara ekmek vermeyin!",
+  "splash.silly-goose.untitled_goose_game": "Untitled Goose Game'i de deneyin!",
+  "splash.silly-goose.no_geese_allowed": "Kazlar giremez!",
+  "splash.silly-goose.honking": "*Korna sesleri yoğunlaşıyor.*",
+
+  "tag.item.silly-goose.goose_eggs": "Kaz Yumurtası",
+
+  "modmenu.descriptionTranslation.silly-goose": "Minecraft'a biraz sinir bozucu olan aptal kazlar ekleyen saçma bir mod.",
+  "modmenu.nameTranslation.modmenu": "Aptal Kaz"
+}
