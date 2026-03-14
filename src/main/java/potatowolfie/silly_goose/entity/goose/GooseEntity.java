@@ -16,6 +16,7 @@ import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.spawn.SpawnContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.entry.LazyRegistryEntryReference;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.BlockTags;
@@ -278,12 +279,12 @@ public class GooseEntity extends AnimalEntity {
 
         return damaged;
     }
-    
+
     private void alertAdultsOfBabyAttack(PlayerEntity attacker) {
         Box box = this.getBoundingBox().expand(REVENGE_NOTIFICATION_RADIUS);
 
         List<GooseEntity> adults = this.getEntityWorld().getEntitiesByClass(
-             GooseEntity.class,
+                GooseEntity.class,
                 box,
                 goose -> goose != this && goose.isAlive() && !goose.isBaby()
         );
@@ -749,6 +750,23 @@ public class GooseEntity extends AnimalEntity {
             if (spawnReason == SpawnReason.NATURAL && this.random.nextFloat() < 0.3F) {
                 entityData = new GooseGroupData(true);
             }
+
+            if (this.random.nextFloat() < 0.05F) {
+                float swordRoll = this.random.nextFloat();
+                ItemStack spawnSword;
+                if (swordRoll < 0.50F) {
+                    spawnSword = new ItemStack(Items.WOODEN_SWORD);
+                } else if (swordRoll < 0.85F) {
+                    spawnSword = new ItemStack(Items.STONE_SWORD);
+                } else {
+                    spawnSword = new ItemStack(Items.IRON_SWORD);
+                }
+                int maxDamage = spawnSword.getMaxDamage();
+                int damage = this.random.nextInt((int)(maxDamage * 0.25F) + 1);
+                spawnSword.setDamage(damage);
+                this.equipStack(EquipmentSlot.MAINHAND, spawnSword);
+                this.setEquipmentDropChance(EquipmentSlot.MAINHAND, 2.0F);
+            }
         }
 
         if (entityData instanceof GooseGroupData groupData && groupData.shouldSpawnBabies()) {
@@ -861,5 +879,5 @@ public class GooseEntity extends AnimalEntity {
         IS_IN_HIT_AND_RUN_MODE = DataTracker.registerData(GooseEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     }
 
-    
+
 }
