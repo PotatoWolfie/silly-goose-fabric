@@ -114,13 +114,14 @@ public class GooseEntity extends AnimalEntity {
     protected void initGoals() {
         this.goalSelector.add(0, new GooseRevengeGoal(this));
         this.goalSelector.add(1, new GooseHitAndRunGoal(this));
-        this.goalSelector.add(2, new EscapeDangerGoal(this, 1.4));
-        this.goalSelector.add(3, new AnimalMateGoal(this, 1.0));
-        this.goalSelector.add(4, new TemptGoal(this, 1.1, stack -> stack.isIn(ItemTags.CHICKEN_FOOD), false));
-        this.goalSelector.add(5, new BabyGooseFollowGoal(this, 1.1));
-        this.goalSelector.add(6, new GooseWanderGoal(this, 1.0));
-        this.goalSelector.add(7, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.add(8, new LookAroundGoal(this));
+        this.goalSelector.add(2, new GooseStealFromVillagerGoal(this));
+        this.goalSelector.add(3, new EscapeDangerGoal(this, 1.4));
+        this.goalSelector.add(4, new AnimalMateGoal(this, 1.0));
+        this.goalSelector.add(5, new TemptGoal(this, 1.1, stack -> stack.isIn(ItemTags.CHICKEN_FOOD), false));
+        this.goalSelector.add(6, new BabyGooseFollowGoal(this, 1.1));
+        this.goalSelector.add(7, new GooseWanderGoal(this, 1.0));
+        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.add(9, new LookAroundGoal(this));
     }
 
     public static DefaultAttributeContainer.Builder createGooseAttributes() {
