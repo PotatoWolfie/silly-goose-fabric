@@ -9,6 +9,9 @@ import net.minecraft.client.render.entity.model.ModelTransformer;
 import net.minecraft.client.render.entity.model.ModelWithArms;
 import net.minecraft.client.render.entity.state.EntityRenderState;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Arm;
 import net.minecraft.util.math.RotationAxis;
 import potatowolfie.silly_goose.animation.GooseAnimations;
@@ -115,10 +118,30 @@ public class GooseEntityModel extends EntityModel<GooseEntityRenderState> implem
 	public void setArmAngle(EntityRenderState state, Arm arm, MatrixStack matrices) {
 		this.body.applyTransform(matrices);
 		this.head.applyTransform(matrices);
-		matrices.translate(-0.09, -0.72, 0.155);
-		matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(0.0F));
-		matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-100.0F));
-		matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(90.0F));
-		matrices.scale(0.85F, 0.85F, 0.85F);
+
+		ItemStack stack = ItemStack.EMPTY;
+		if (state instanceof GooseEntityRenderState gooseState) {
+			stack = gooseState.getItemStackForArm(arm);
+		}
+
+		if (stack.isIn(ItemTags.SWORDS)) {
+			matrices.translate(-0.09, -0.72, 0.155);
+			matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(0.0F));
+			matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-100.0F));
+			matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(90.0F));
+			matrices.scale(0.85F, 0.85F, 0.85F);
+		} else if (stack.isOf(Items.WHEAT)){
+			matrices.translate(-0.09, -1.25, -0.355);
+			matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(170.0F));
+			matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-45.0F));
+			matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(170.0F));
+			matrices.scale(0.85F, 0.85F, 0.85F);
+		} else {
+			matrices.translate(-0.265, -1.25, -0.255);
+			matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(170.0F));
+			matrices.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(-90.0F));
+			matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(170.0F));
+			matrices.scale(0.85F, 0.85F, 0.85F);
+		}
 	}
 }

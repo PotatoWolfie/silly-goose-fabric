@@ -28,7 +28,7 @@ public class GooseStealFromVillagerGoal extends Goal {
         }
 
         // Find nearby villagers
-        List<VillagerEntity> list = goose.getWorld().getEntitiesByClass(
+        List<VillagerEntity> list = goose.getEntityWorld().getEntitiesByClass(
             VillagerEntity.class, 
             goose.getBoundingBox().expand(8.0, 4.0, 8.0), 
             villager -> !villager.getInventory().isEmpty()

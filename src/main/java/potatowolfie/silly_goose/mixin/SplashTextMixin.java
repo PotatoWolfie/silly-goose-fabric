@@ -1,6 +1,7 @@
 package potatowolfie.silly_goose.mixin;
 
 import net.minecraft.client.resource.SplashTextResourceSupplier;
+import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -15,22 +16,24 @@ import java.util.List;
 public class SplashTextMixin {
 
     @Shadow
-    private List<String> splashTexts;
+    private List<Text> splashTexts;
 
     @Inject(method = "apply*",
             at = @At("TAIL"))
     private void addGooseSplashes(CallbackInfo ci) {
         splashTexts = new ArrayList<>(splashTexts);
 
-        splashTexts.add(Text.translatable("splash.silly-goose.honk").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.silly_goose").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.define").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.quack").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.duck").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.57").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.goose_overlords").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.untitled_goose_game").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.no_geese_allowed").getString());
-        splashTexts.add(Text.translatable("splash.silly-goose.honking").getString());
+        Style splashStyle = Style.EMPTY.withColor(0xFFFF00);
+
+        splashTexts.add(Text.translatable("splash.silly-goose.honk").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.silly_goose").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.define").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.quack").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.duck").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.57").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.goose_overlords").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.untitled_goose_game").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.no_geese_allowed").setStyle(splashStyle));
+        splashTexts.add(Text.translatable("splash.silly-goose.honking").setStyle(splashStyle));
     }
 }
