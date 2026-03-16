@@ -1,0 +1,50 @@
+{
+  "item.silly-goose.goose_spawn_egg": "Œuf d'apparition d'oie",
+  "item.silly-goose.white_egg": "Œuf blanc",
+  "item.silly-goose.big_white_egg": "Grand œuf blanc",
+  "item.silly-goose.small_white_egg": "Petit œuf blanc",
+  "item.silly-goose.raw_goose": "Oie crue",
+  "item.silly-goose.cooked_goose": "Oie cuite",
+
+  "entity.silly-goose.goose": "Oie",
+  "entity.silly-goose.white_egg": "Œuf blanc",
+  "entity.silly-goose.small_white_egg": "Petit œuf blanc",
+  "entity.silly-goose.big_white_egg": "Grand œuf blanc",
+
+  "death.attack.goose_bother": "%1$s étais mort d'agacement",
+  "death.attack.goose_bother.item": "%1$s était exaspéré par %2$s utilisant %3$s",
+
+  "death.attack.goose_peck": "%1$s a été picoré à mort",
+  "death.attack.goose_peck.item": "%1$s a été picoré à mort par %2$s utilisant %3$s",
+
+  "death.attack.goose_honk": "%1$s s'est fait klaxonner par une oie",
+  "death.attack.goose_honk.item": "%1$s s'est fait klaxonner par une oie utilisant %3$s",
+
+  "sounds.silly-goose.goose_honk": "L'oie cacarde",
+  "sounds.silly-goose.goose_attack": "Attaques d'oies",
+  "sounds.silly-goose.goose_death": "L'oie meurt",
+  "sounds.silly-goose.goose_hurt": "Goose a mal",
+
+  "advancement.silly-goose.honk_and_run.title": "Klaxonne et fuis",
+  "advancement.silly-goose.honk_and_run.description": "Se faire percuter par une oie",
+  "advancement.silly-goose.hit_and_run.title": "Délit de fuite",
+  "advancement.silly-goose.hit_and_run.description": "Se faire frapper par une oie tenant une épée.",
+  "advancement.silly-goose.unfair_trade.title": "Commerce inéquitable",
+  "advancement.silly-goose.unfair_trade.description": "Donne de la nourriture à une oie en échange d'une épée.",
+
+  "splash.silly-goose.honk": "BASE BASE",
+  "splash.silly-goose.silly_goose": "Tu es un petit fou!",
+  "splash.silly-goose.define": "Définissez Oie. (Indice : ce n'est pas 12.)",
+  "splash.silly-goose.quack": "C'est un cri d'oie, pas un cancanement.",
+  "splash.silly-goose.duck": "Nous n'ajoutons toujours pas de canards.",
+  "splash.silly-goose.57": "Désormais avec 57 % d'oies en plus!",
+  "splash.silly-goose.goose_overlords": "Ne donnez pas de pain aux oies!",
+  "splash.silly-goose.untitled_goose_game": "Essayez aussi Untitled Goose Game!",
+  "splash.silly-goose.no_geese_allowed": "Oies interdites!",
+  "splash.silly-goose.honking": "Les coups de klaxon s'intensifient",
+
+  "tag.item.silly-goose.goose_eggs": "Œuf d'oie",
+
+  "modmenu.descriptionTranslation.silly-goose": "Un mod loufoque qui ajoute à Minecraft des oies farfelues, légèrement agaçantes.",
+  "modmenu.nameTranslation.modmenu": "Petit de oie"
+}
