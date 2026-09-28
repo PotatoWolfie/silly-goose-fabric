@@ -9,7 +9,7 @@
 		"PotatoWolfie"
 	],
 	"contact": {
-		"homepage": "https://potatowolfie.github.io/silly-goose.html",
+		"homepage": "https://potatowolfie.github.io/Silly_Goose",
 		"sources": "https://github.com/PotatoWolfie/silly-goose"
 	},
 	"license": "Limited All Rights Reserved",
@@ -46,7 +46,7 @@
 			"links": {
 				"modmenu.modrinth": "https://modrinth.com/mod/silly-goose",
 				"modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/silly-goose",
-				"modmenu.wiki": "https://potatowolfie.github.io/silly_goose.html"
+				"modmenu.wiki": "https://potatowolfie.github.io/Silly_Goose"
 			}
 		}
 	}
