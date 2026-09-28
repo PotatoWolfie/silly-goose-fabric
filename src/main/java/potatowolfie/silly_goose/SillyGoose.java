@@ -5,10 +5,17 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Position;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ProjectileItem;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.levelgen.Heightmap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,6 +41,8 @@ public class SillyGoose implements ModInitializer {
 		SillyGooseEntities.registerModEntities();
 		SillyGooseItems.registerModItems();
 		SillyGooseSounds.registerSounds();
+
+		registerDispenserBehaviors();
 
 		FabricDefaultAttributeRegistry.register(SillyGooseEntities.GOOSE, GooseEntity.createGooseAttributes());
 		SpawnPlacements.register(
@@ -75,5 +84,37 @@ public class SillyGoose implements ModInitializer {
 		} else if (number == 2) {
 			LOGGER.info("Define Goose. (Hint: It isn't 12)");
 		}
+	}
+
+	private void registerDispenserBehaviors() {
+		registerProjectileDispenserBehavior(SillyGooseItems.SMALL_WHITE_EGG);
+		registerProjectileDispenserBehavior(SillyGooseItems.WHITE_EGG);
+		registerProjectileDispenserBehavior(SillyGooseItems.BIG_WHITE_EGG);
+	}
+
+	private void registerProjectileDispenserBehavior(Item item) {
+		DispenserBlock.registerBehavior(
+				item,
+				(pointer, stack) -> {
+					Level world = pointer.level();
+					Position position = DispenserBlock.getDispensePosition(pointer);
+					Direction direction = pointer.state().getValue(DispenserBlock.FACING);
+
+					ProjectileItem projectileItem = (ProjectileItem) stack.getItem();
+					Projectile projectileEntity = projectileItem.asProjectile(world, position, stack, direction);
+
+					projectileEntity.shoot(
+							direction.getStepX(),
+							direction.getStepY() + 0.1F,
+							direction.getStepZ(),
+							1.5F,
+							0.1F
+					);
+
+					world.addFreshEntity(projectileEntity);
+					stack.shrink(1);
+					return stack;
+				}
+		);
 	}
 }

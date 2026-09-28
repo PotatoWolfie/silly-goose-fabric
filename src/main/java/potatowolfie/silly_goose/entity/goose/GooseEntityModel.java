@@ -18,6 +18,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import org.joml.Matrix4f;
 import potatowolfie.silly_goose.animation.BabyGooseAnimations;
 import potatowolfie.silly_goose.animation.GooseAnimations;
 
@@ -186,21 +187,22 @@ public class GooseEntityModel extends EntityModel<GooseEntityRenderState> implem
 
 		if (stack.is(ItemTags.SWORDS)) {
 			matrices.translate(-0.09, -0.72, 0.155);
-			matrices.mulPose(Axis.XP.rotationDegrees(0.0F));
-			matrices.mulPose(Axis.YP.rotationDegrees(-100.0F));
-			matrices.mulPose(Axis.ZP.rotationDegrees(90.0F));
+			matrices.mulPose(new Matrix4f().rotation(Axis.XP.rotationDegrees(0.0F)));
+			matrices.mulPose(new Matrix4f().rotation(Axis.YP.rotationDegrees(-100.0F)));
+			matrices.mulPose(new Matrix4f().rotation(Axis.ZP.rotationDegrees(90.0F)));
 			matrices.scale(0.85F, 0.85F, 0.85F);
-		} else if (stack.is(Items.WHEAT) || stack.is(Items.BREAD)){
+		} else if (stack.is(Items.WHEAT) || stack.is(Items.BREAD)) {
 			matrices.translate(-0.09, -1.25, -0.355);
-			matrices.mulPose(Axis.XP.rotationDegrees(170.0F));
-			matrices.mulPose(Axis.YP.rotationDegrees(-45.0F));
-			matrices.mulPose(Axis.ZP.rotationDegrees(170.0F));
+			matrices.mulPose(new Matrix4f().rotation(Axis.XP.rotationDegrees(170.0F)));
+			matrices.mulPose(new Matrix4f().rotation(Axis.YP.rotationDegrees(-45.0F)));
+			matrices.mulPose(new Matrix4f().rotation(Axis.ZP.rotationDegrees(170.0F)));
 			matrices.scale(0.85F, 0.85F, 0.85F);
 		} else {
 			matrices.translate(-0.265, -1.25, -0.255);
-			matrices.mulPose(Axis.XP.rotationDegrees(170.0F));
-			matrices.mulPose(Axis.YP.rotationDegrees(-90.0F));
-			matrices.mulPose(Axis.ZP.rotationDegrees(170.0F));
+			matrices.mulPose(new Matrix4f().rotation(Axis.XP.rotationDegrees(170.0F)));
+			matrices.mulPose(new Matrix4f().rotation(Axis.YP.rotationDegrees(-90.0F)));
+			matrices.mulPose(new Matrix4f().rotation(Axis.ZP.rotationDegrees(170.0F)));
+
 			matrices.scale(0.85F, 0.85F, 0.85F);
 		}
 	}

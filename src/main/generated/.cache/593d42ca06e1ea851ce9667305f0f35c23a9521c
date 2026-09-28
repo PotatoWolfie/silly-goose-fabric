@@ -1,0 +1,4 @@
+// 26.3	-999999999-01-01T00:00:00	Silly Goose/World Gen
+cec4f29e09a5b93753f8a153eaddc9b3ffa162df data/silly-goose/silly-goose/goose_variant/cold.json
+d72ee979b074f50302d92b5a73346117bbdbb3f9 data/silly-goose/silly-goose/goose_variant/temperate.json
+0e9e3beee2010eb24dd948250e49b3c57486b3e9 data/silly-goose/silly-goose/goose_variant/warm.json

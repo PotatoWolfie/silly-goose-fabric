@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "silly-goose:cooked_goose_from_smelting"
+        "recipes": "silly-goose:cooked_goose_from_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
