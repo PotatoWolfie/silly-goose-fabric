@@ -428,10 +428,21 @@ public class GooseEntity extends Animal {
         int waterBlocksFound = 0;
         int requiredWaterBlocks = 6;
 
-        for (int x = -horizontalRadius; x <= horizontalRadius; x += 2) {
-            for (int z = -horizontalRadius; z <= horizontalRadius; z += 2) {
-                for (int y = -verticalRange; y <= verticalRange; y++) {
-                    mutable.set(center.getX() + x, center.getY() + y, center.getZ() + z);
+        var chunkX = center.getX() >> 4 << 4;
+        var chunkZ = center.getZ() >> 4 << 4;
+
+        var bottomX = Math.clamp(center.getX() - horizontalRadius, chunkX, chunkX + 15);
+        var topX = Math.clamp(center.getX() + horizontalRadius, chunkX, chunkX + 15);
+        var bottomZ = Math.clamp(center.getZ() - horizontalRadius, chunkZ, chunkZ + 15);
+        var topZ = Math.clamp(center.getZ() + horizontalRadius, chunkZ, chunkZ + 15);
+        var bottomY = Math.clamp(center.getY() - verticalRange, world.getMinY(), world.getMaxY());
+        var topY = Math.clamp(center.getY() + verticalRange, world.getMinY(), world.getMaxY());
+
+
+        for (int x = bottomX; x <= topX; x += 2) {
+            for (int z = bottomZ; z <= topZ; z += 2) {
+                for (int y = bottomY; y <= topY; y++) {
+                    mutable.set(x, y, z);
 
                     if (world.getFluidState(mutable).is(FluidTags.WATER)) {
                         waterBlocksFound++;
